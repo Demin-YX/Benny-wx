@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Mine/index"
+  ],
+  "window":{
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "帮你抢",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#e6e6e6",
+    "selectedColor": "#2582f1",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/Mine/index",
+        "text": "我的",
+        "iconPath": "./tabBarIcons/5.png",
+        "selectedIconPath": "./tabBarIcons/5-se.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "./tabBarIcons/5.png",
+        "selectedIconPath": "./tabBarIcons/5-se.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "AuthLogin": "./components/AuthLogin/AuthLogin"
+  }
+}
+

@@ -1,0 +1,9 @@
+<view wx:if="{{show}}" style="opacity: {{opacity}}" class="container" catchtap="tapMask" catchtouchmove="moveMask">
+    <view class="window">
+        <view>
+            <image class="img" src="./login.jpg"></image>
+            <button class="btn" open-type="getUserInfo"
+                    bindgetuserinfo="tapLogin">授权登录</button>
+        </view>
+    </view>
+</view>
