@@ -1,29 +1,4 @@
-const config = require('../../config')
-
-function post(url, data) {
-    let promise = new Promise((resolve, reject) => {
-        CwxRequest(url, data, resolve, reject)
-    })
-    return promise.then(res => {
-        return res.data
-    }).catch(err => {
-        console.log(err)
-    })
-}
-
-function CwxRequest(url, data, resolve, reject) {
-    wx.request({
-        url: config.url + url,
-        method: "POST",
-        data: data,
-        header: {
-            'content-type': "application/json",
-        },
-        success: (result) => resolve(result),
-        fail: (err) => reject(err)
-    })
-}
-
+const configs = require('../../config')
 
 function wxRequest(url, config, resolve, reject) {
     let {
@@ -32,48 +7,66 @@ function wxRequest(url, config, resolve, reject) {
         method = 'GET',
         ...other
     } = {...config}
+    console.log(config.url + url)
     wx.request({
-        url: url,
+        url: configs.url + url,
         data: {...data},
         method: method,
         header: {
             'content-type': contentType,
-            'Cookie': app.globalData.cookie  // 全局变量中获取 cookie
         },
-        success: (data) => resolve(data),
-        fail: (err) => reject(err)
+        success: result => resolve(result),
+        fail: err => reject(err)
     })
 }
 
+
+function ComPost(url, data) {
+    return new Promise((resolve, reject) => {
+        wxRequest(url, {
+            data: data,
+            contentType: 'application/json',
+            method: 'POST',
+        }, resolve, reject)
+    }).then(res => {
+        return res.data
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
+function postWithGlobalToken(url, data) {
+    wx.getStorage({
+        key: 'LOCAL-TOKEN',
+        success: (result => {
+            let token = result.data ? result.data : "";
+            wx.request({
+                url: config.url + url,
+                data: data,
+                header: token ? {
+                    "Authorization": "JWT " + token
+                } : {},
+                success: result => {
+                    console.log(result)
+                },
+                fail: res => {
+                    console.log(res)
+                }
+            })
+
+        }),
+        fail: () => {
+            wx.setStorage({
+                data: '',
+                key: 'LOCAL-TOKEN',
+            })
+        }
+    })
+}
+
+
 module.exports = {
-    post: post,
+    ComPost,
 
-    postWithGlobalToken: function (url, data) {
-        wx.getStorage({
-            key: 'LOCAL-TOKEN',
-            success: (result => {
-                let token = result.data ? result.data : "";
-                wx.request({
-                    url: config.url + url,
-                    data: data,
-                    header: token ? {
-                        "Authorization": "JWT " + token
-                    } : {},
-                    success: result => {
-                        console.log(result)
-                    },
-                    fail: res => {
-                        console.log(res)
-                    }
-                })
 
-            }),
-            fail: () => {
-                wx.setStorage({
-                    data: '',
-                    key: 'LOCAL-TOKEN',
-                })
-            }
-        })
-    },
 }

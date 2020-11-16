@@ -1,4 +1,4 @@
-const {post} = require("../../utils/js/network")
+const {ComPost} = require("../../utils/js/network")
 Component({
     properties: {
         show: {
@@ -55,13 +55,12 @@ Component({
             })
         },
         login: function (data) {
-            post("/user/obtain_token", data).then(response => {
-                console.log(response)
+            ComPost("/user/obtain_token", data).then(response => {
                     if (response.result) {
                         getApp().setToken(response.data.token);
-                        // this.setData({
-                        //     show: false
-                        // })
+                        this.setData({
+                            show: false
+                        })
                     }
                 }
             );
@@ -94,7 +93,5 @@ Component({
                 })
             }
         },
-
-
     }
 });
