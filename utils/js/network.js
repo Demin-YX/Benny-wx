@@ -7,7 +7,6 @@ function wxRequest(url, config, resolve, reject) {
         method = 'GET',
         ...other
     } = {...config}
-    console.log(config.url + url)
     wx.request({
         url: configs.url + url,
         data: {...data},

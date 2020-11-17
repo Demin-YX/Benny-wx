@@ -3,7 +3,7 @@ Component({
     properties: {
         show: {
             type: Boolean,
-            value: false
+            value: true
         }
     },
     pageLifetimes: {
@@ -57,13 +57,16 @@ Component({
         login: function (data) {
             ComPost("/user/obtain_token", data).then(response => {
                     if (response.result) {
+                        console.log(response)
                         getApp().setToken(response.data.token);
                         this.setData({
                             show: false
                         })
                     }
                 }
-            );
+            ).catch(err => {
+                console.log(err)
+            });
 
 
         },

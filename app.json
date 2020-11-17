@@ -1,10 +1,9 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/Mine/index"
+  "pages": [
+    "pages/Mine/index",
+    "pages/index/index"
   ],
-  "window":{
+  "window": {
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ffffff",
@@ -19,14 +18,14 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/Mine/index",
-        "text": "我的",
+        "pagePath": "pages/index/index",
+        "text": "首页",
         "iconPath": "./tabBarIcons/5.png",
         "selectedIconPath": "./tabBarIcons/5-se.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "我",
+        "pagePath": "pages/Mine/index",
+        "text": "我的",
         "iconPath": "./tabBarIcons/5.png",
         "selectedIconPath": "./tabBarIcons/5-se.png"
       }

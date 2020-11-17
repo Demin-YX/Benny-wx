@@ -40,7 +40,7 @@ App({
             })
         }
         else {
-            // 需要手动地去办法之
+            console.log("没有token，等待AuthLogin触发")
         }
         // wx.getStorage({
         //     key: 'LOCAL-TOKEN',
