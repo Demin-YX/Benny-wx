@@ -1,1 +1,95 @@
-/* pages/Mine/index.wxss */
+page{
+    background-color: #eee;
+}
+
+.mine_head{
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 25rpx;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head_img{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.txt{
+    width: 370rpx;
+}
+
+.name{
+    font-size: 48rpx;
+    font-weight: 800;
+}
+
+.region{
+    font-size: 28rpx;
+    color: #B7B7B7;
+    letter-spacing: 1rpx;
+    margin-top: 5rpx;
+}
+
+.share_img{
+    width: 55rpx;
+    height: 55rpx;
+    padding: 20rpx 30rpx;
+}
+
+.share_img:active{
+    opacity: 0.5;
+}
+
+.lists{
+    width: 700rpx;
+    background-color: white;
+    margin: 0 25rpx;
+    margin-top: 25rpx;
+    border-radius: 15rpx;
+    padding: 15rpx 0;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0rpx 35rpx;
+    transition: 0.2s;
+}
+
+.list:active{
+    background-color: #f6f6f6;
+}
+
+.list_img{
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.arrow{
+    width: 14rpx;
+    height: 26rpx;
+    padding-right: 10rpx;
+}
+
+.right{
+    width: 540rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40rpx 0;
+    border-bottom: 2rpx #F6F6F6 solid;
+}
+
+.list_txt{
+    font-size: 36rpx;
+}
+
+.btn6{
+    border-bottom: none;
+}

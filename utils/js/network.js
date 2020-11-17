@@ -63,9 +63,27 @@ function postWithGlobalToken(url, data) {
     })
 }
 
+function AuthHPost(url, data = {}) {
+    return new Promise((resolve, reject) => {
+        wx.request({
+            url: configs.url + url,
+            data: data,
+            method: "POST",
+            header: {
+                'content-type': 'application/json',
+                'Authorization': 'JWT ' + getApp().getToken()
+            },
+            success: result => resolve(result),
+            fail: err => reject(err)
+        })
+    }).then(res => res.data).catch(err => {
+        console.log(err)
+    })
+
+}
 
 module.exports = {
     ComPost,
-
+    AuthHPost
 
 }
