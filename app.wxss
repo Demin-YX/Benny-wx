@@ -1,10 +1,66 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+page {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  /* background-color: #1582eb; */
+}
+
+.title {
+  margin: 0;
+  padding-left: 35rpx;
+  padding-top: 30rpx;
+  padding-bottom: 10rpx;
+  color: rgb(45, 45, 45);
+  font-weight: normal;
+  font-size: 40rpx;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.card {
+  width: 710rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.top--30rpx {
+  margin-top: 30rpx;
+}
+
+.van-button {
+  width: 250rpx !important;
+}
+
+.tip {
+  font-size: 14px;
+  color: #aaaaaa;
   box-sizing: border-box;
-} 
+  margin-top: 15rpx;
+  margin-bottom: 35rpx;
+  /* margin-left: 20px; */
+  padding: 0 20px;
+}
+
+.empty_card {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f7f7f7;
+  padding: 20rpx 20rpx;
+  width: 710rpx;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.active:active{
+  opacity: 0.5;
+}

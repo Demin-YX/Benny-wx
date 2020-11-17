@@ -1,2 +1,25 @@
-<!--pages/Mine/index.wxml-->
-<text>pages/Mine/index.wxml</text>
+<view class="mine_head">
+    <image class="head_img" src="{{head_img}}"></image>
+    <view class="txt">
+        <view class="name">{{name}}</view>
+        <view class="region">{{region}}</view>
+    </view>
+    <image class="share_img" src="./share.svg"></image>
+</view>
+
+<view style="position: relative; width: 100%; height: 20rpx;"></view>
+
+<subscribe />
+
+<view class="lists">
+    <view class="list" wx:for="{{lists}}" wx:key="key">
+        <image class="list_img" src="./img/{{index+1}}.svg"></image>
+        <view class="right btn{{index+1}}">
+            <view class="list_txt">{{item}}</view>
+            <image class="arrow" src="./arrow.svg"></image>
+        </view>
+    </view>
+</view>
+
+
+<AuthLogin/>

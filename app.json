@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/Mine/index",
-    "pages/index/index"
+    "pages/NewGoods/index"
   ],
   "window": {
     "backgroundColor": "#ffffff",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "帮你抢",
+    "navigationBarTitleText": "Benny",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -20,8 +21,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "./tabBarIcons/5.png",
-        "selectedIconPath": "./tabBarIcons/5-se.png"
+        "iconPath": "./tabBarIcons/6.png",
+        "selectedIconPath": "./tabBarIcons/6-se.png"
+      },
+      {
+        "pagePath": "pages/NewGoods/index",
+        "text": "上新",
+        "iconPath": "./tabBarIcons/7.png",
+        "selectedIconPath": "./tabBarIcons/7-se.png"
       },
       {
         "pagePath": "pages/Mine/index",
