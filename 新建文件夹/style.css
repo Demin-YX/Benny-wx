@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: pink; */
+}
+.conta{
+    width: 600px;
+    height: 500px;
+    background-image: linear-gradient(135deg,#CAFBD5,#F3DD93,#F77C7D) ;
+    border-radius: 30px;
+}
+.conta .title{
+    margin: 15px 20px 5px;
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+.decisption{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.decisption .dctxt{
+    margin-left: 12px;
+    color: white;
+    font-size: 22px;
+}
+.decisption  .money{
+    color: white;
+    font-size: 21px;
+    margin-right:12px ;
+}
+.photo{
+    display: flex;
+}
+.photo img{
+    border-radius: 50px; 
+}
+
+.photo .leftp img{
+    margin-left: 12px;
+    width: 210px;
+    height: 335px;
+}
+.rightp{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.rightp img{
+    padding-bottom: 10px;
+    object-fit: cover;
+}
+.rightp>img:first-child{
+    width: 335px;
+    height: 150px;
+}
+.rightp>img:nth-child(2){
+    width: 335px;
+    height: 175px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom .talk{
+    padding-left: 15px;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+}
+.lt{
+    width: 80px;
+    margin-right: 10px;
+    display: flex;
+    justify-content:space-between;
+}
