@@ -1,2 +1,6 @@
 <!--pages/NewGoods/index.wxml-->
-<text>pages/NewGoods/index.wxml</text>
+<text>上新页面</text>
+<view class="center">
+    <GoodBlock/>
+    <GoodBlock/>
+</view>

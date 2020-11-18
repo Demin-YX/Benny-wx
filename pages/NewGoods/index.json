@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "GoodBlock": "/components/GoodBlock/GoodBlock"
+  },
   "navigationBarTitleText": "最新上架",
   "navigationBarBackgroundColor": "#eeeeee"
 

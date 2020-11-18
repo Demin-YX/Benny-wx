@@ -1,0 +1,73 @@
+.container{
+    width: 650rpx;
+    height: 500rpx;
+    background-image: linear-gradient(135deg,#CAFBD5,#F3DD93,#F77C7D) ;
+    border-radius: 30rpx;
+}
+.container .title{
+    padding-top: 5rpx;
+    margin: 15rpx 20rpx;
+    font-size: 45rpx;
+    font-weight: bold;
+    color: white;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rpx;
+}
+.description .dectxt{
+    margin-left: 12rpx;
+    color: white;
+    font-size: 28rpx;
+}
+.description  .money{
+    color: white;
+    font-size: 28rpx;
+    margin-right:12rpx ;
+}
+.photo{
+    display: flex;
+}
+.photo img{
+    border-radius: 50rpx;
+}
+
+.photo .leftp img{
+    margin-left: 12rpx;
+    width: 210rpx;
+    height: 335rpx;
+}
+.rightp{
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+.rightp img{
+    padding-bottom: 10rpx;
+    object-fit: cover;
+}
+.rightp>img:first-child{
+    width: 335rpx;
+    height: 150rpx;
+}
+.rightp>img:nth-child(2){
+    width: 335rpx;
+    height: 175rpx;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom .talk{
+    padding-left: 15rpx;
+    color: white;
+    font-size: 21rpx;
+    font-weight: 600;
+}
+.lt{
+    width: 80rpx;
+    margin-right: 10rpx;
+    display: flex;
+    justify-content:space-between;
+}

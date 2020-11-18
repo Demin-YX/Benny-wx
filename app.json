@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/NewGoods/index",
     "pages/index/index",
-    "pages/Mine/index",
-    "pages/NewGoods/index"
+    "pages/Mine/index"
   ],
   "window": {
     "backgroundColor": "#ffffff",

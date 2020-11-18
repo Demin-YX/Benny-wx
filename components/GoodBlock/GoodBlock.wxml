@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="title">琉璃</view>
+    <view class="description">
+        <view class="dectxt">🏠 茗林尚品 原创汉服</view>
+        <view class="money">￥220</view>
+    </view>
+    <view class="photo">
+        <view class="leftp">
+            <image src="" alt=""></image>
+        </view>
+        <view class="rightp">
+            <image src="" alt=""></image>
+            <image src="" alt=""></image>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="talk"></view>
+        <view class="landt">
+            <view class="like"></view>
+            <view class="turns"></view>
+        </view>
+    </view>
+</view>
