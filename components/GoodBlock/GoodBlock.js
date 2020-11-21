@@ -1,5 +1,7 @@
 Component({
-    properties: {},
+    properties: {
+
+    },
     data: {},
     methods: {}
 });
